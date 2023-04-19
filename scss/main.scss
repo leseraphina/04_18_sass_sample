@@ -1,0 +1,68 @@
+@use './variable.scss' as * ;
+@import './mixin.scss';
+@import './common.scss';
+
+// header
+header{
+  padding:$basic*7 0 $basic*2;
+  position:relative;
+  background-color:$back;
+}
+
+.bottom{
+  > h1{  
+    margin-bottom:$basic * 5;
+    @include center;
+  }
+  > nav{
+    ul{
+      @include layout($start:center);
+      li{
+        margin: 0 $basic*3;
+        padding-bottom:$basic;
+        position:relative;
+        a{
+          font-size:$small;
+          color:$darken;
+        }
+        span{
+          position:absolute;
+          left:0; bottom:0;
+          width: 100%;height:1px;
+          background-color:transparent;
+        }
+        &:hover{
+          span{
+            background-color:$darken;
+          }
+        }
+      }
+    }
+  }
+}
+
+.top{
+  position:absolute;
+  width:$full;
+  padding:$basic*2 0 $basic;
+  background-color:$white;
+  left:0; top:0;
+  p{
+    width:$content;
+    @include margin;
+    a{
+      font-size:$small;
+      color:$color;
+    }
+  }
+ 
+}
+
+// article
+article{
+
+}
+
+.btn{}
+
+.gallery{}

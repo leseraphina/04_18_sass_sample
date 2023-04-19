@@ -1,0 +1,16 @@
+@mixin layout($start:space-between, $verticla:center,$wrap:nowrap,$direction:row){
+  display:flex;
+  justify-content:$start ;
+  align-items: $verticla;
+  flex-direction:$direction ;
+  flex-wrap:$wrap;
+}
+
+@mixin margin($bottom:0){
+  margin: 0 auto;
+  margin-bottom:$bottom;
+}
+
+@mixin center{
+  text-align:center;
+}

@@ -1,0 +1,29 @@
+// size
+$size-content:1170px;
+$size-basic:10px;
+
+// font
+$font-small: 12px;
+$font-large: 14px;
+
+// color
+$color-font: #888888;
+$color-darken: #25292c;
+$color-back:#e8e8e8;
+$color-red:#ca7379;
+
+//  단축형: 꼭 해야 되는 것은 아니다.
+
+$content: $size-content;
+$basic: $size-basic;
+
+$small: $font-small;
+$large: $font-large;
+
+$color: $color-font;
+$darken: $color-darken;
+$back: $color-back;
+$red: $color-red;
+
+$white:#ffffff;
+$full:100%;
