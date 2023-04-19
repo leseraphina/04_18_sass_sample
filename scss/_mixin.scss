@@ -1,3 +1,4 @@
+@use './variable' as *;
 @mixin layout($start:space-between, $verticla:center,$wrap:nowrap,$direction:row){
   display:flex;
   justify-content:$start ;
@@ -13,4 +14,7 @@
 
 @mixin center{
   text-align:center;
+}
+@mixin border($width:#e8e8e8){
+  border:1px solid $width;
 }
