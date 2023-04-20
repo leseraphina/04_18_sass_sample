@@ -1,0 +1,127 @@
+@use './variable.scss' as * ;
+@use './mixin' as *;
+
+// article
+article{
+  > div{
+    padding:$basic * 10 0;
+    width:$content;
+    @include margin;
+    h3{
+      margin-bottom:$basic * 8;
+      @include center;
+      font-size:$basic * 4;
+      color:$darken;
+    }
+  }
+  }
+  
+  .btn{
+    position:relative;
+    @include layout;
+    p.left{
+      font-size:$small;
+      color:$color;
+    }
+    p.right{
+      width:200px;
+      padding:$small 0;
+      @include layout($start:center);
+      @include border;
+      border-radius:18px;
+      font-size:$small;
+      box-sizing:border-box;
+      color:$color;
+      > i{
+        padding-left:$basic;
+      }
+    }
+    ul{
+      position:absolute;
+      right:0; top:$basic*4;
+      display:none;
+      width:200px;
+      line-height:25px;
+      font-size:$small;
+      color:$color;
+      @include center;
+      @include border($width:$color);
+      border-bottom:none;
+      li{
+        border-bottom:1px solid $color;
+        font-size:$small;
+        color:$color;
+        line-height:25px;
+        @include center;
+      }
+    }
+  }
+  
+  .gallery{
+    width:$content;
+    @include margin;
+    @include layout($wrap:wrap);
+    figure{
+      width:270px;
+      margin-bottom:50px;
+      position:relative;
+      img{
+        margin-bottom:25px;
+      }
+    }
+    dl{
+      font-size:$large;
+      @include center;
+      dt{
+        margin-bottom:$basic*2;
+        color:$darken;
+        font-weight: bold;
+      }
+      dd{
+        &:nth-child(2){
+          margin-bottom:25px;
+          > ins{
+            color:$red;
+            margin: 0 10px;
+          }
+          > del{
+            color:$color;
+          margin: 0 10px;
+          }
+        }
+        &:nth-child(3){
+         @include layout;
+         button{
+          @include layout($start:center);
+          &:nth-child(1){
+            width:130px;
+            height:36px;
+            color:$darken;
+            border-radius:18px;
+            @include border($width:#888888);
+          }
+          &:nth-child(2){
+            width:36px;
+            height:36px;
+            @include border($width:#888888);
+            border-radius: 50%;
+          }
+         }
+        }
+        &:nth-child(4){
+          position:absolute;
+          right:5px;
+          bottom:140px;
+        b{
+          width:$basic * 5;
+          height:$basic * 5;
+          display:block;
+          background-color:$red;
+          color:$white;
+          border-radius:50%;
+          @include layout($start:center);
+        }
+        }
+      }
+    }
+  }

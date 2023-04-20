@@ -1,131 +1,14 @@
 @use './variable.scss' as * ;
-@import './mixin.scss';
-@import './common.scss';
+@use './mixin' as *;
 
-// header
-header{
-  padding:$basic*7 0 $basic*2;
-  position:relative;
-  background-color:$back;
-}
+@use './common.scss';
+@use './header.scss';
+@use './content.scss';
+@use './footer.scss';
 
-.bottom{
-  > h1{  
-    margin-bottom:$basic * 5;
-    @include center;
-  }
-  > nav{
-    ul{
-      @include layout($start:center);
-      li{
-        margin: 0 $basic*3;
-        padding-bottom:$basic;
-        position:relative;
-        a{
-          font-size:$small;
-          color:$darken;
-        }
-        span{
-          position:absolute;
-          left:0; bottom:0;
-          width: 100%;height:1px;
-          background-color:transparent;
-        }
-        &:hover{
-          span{
-            background-color:$darken;
-          }
-        }
-      }
-    }
-  }
-}
+// @import './mixin.scss';
+// @import './common.scss';
 
-.top{
-  position:absolute;
-  width:$full;
-  padding:$basic*2 0 $basic;
-  background-color:$white;
-  left:0; top:0;
-  p{
-    width:$content;
-    @include margin;
-    a{
-      font-size:$small;
-      color:$color;
-    }
-  }
- 
-}
 
-// article
-article{
-> div{
-  padding:$basic * 10 0;
-  width:$content;
-  @include margin;
-  h3{
-    margin-bottom:$basic * 8;
-    @include center;
-    font-size:$basic * 4;
-    color:$darken;
-  }
-}
-}
 
-.btn{
-  position:relative;
-  @include layout;
-  p.left{
-    font-size:$small;
-    color:$color;
-  }
-  p.right{
-    width:200px;
-    padding:$small 0;
-    @include layout($start:center);
-    @include border;
-    border-radius:18px;
-    font-size:$small;
-    box-sizing:border-box;
-    color:$color;
-    > i{
-      padding-left:$basic;
-    }
-  }
-  ul{
-    position:absolute;
-    right:0; top:$basic*4;
-    display:none;
-    width:200px;
-    line-height:25px;
-    font-size:$small;
-    color:$color;
-    @include center;
-    @include border($width:$color);
-    border-bottom:none;
-    li{
-      border-bottom:1px solid $color;
-      font-size:$small;
-      color:$color;
-      line-height:25px;
-      @include center;
-    }
-  }
-}
 
-.gallery{
-  width:$content;
-  @include margin;
-  @include layout($wrap:wrap);
-  figure{
-    img{}
-  }
-  dl{
-    dt{}
-    dd{
-      &:nth-child(2){}
-      &:nth-child(3){}
-    }
-  }
-}
